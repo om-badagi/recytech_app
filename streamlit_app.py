@@ -18,7 +18,11 @@ client = mqtt.Client()
 
 client.on_message = on_message
 
-client.connect("localhost", 1883, 60)
+client.connect(
+    "broker.hivemq.com",
+    1883,
+    60
+)
 
 client.subscribe("bridge/sensors")
 
